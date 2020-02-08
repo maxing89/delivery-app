@@ -1,0 +1,17 @@
+<ul class="pagination" *ngIf="recordsLength > 0">
+  <li class="page-item page-number">
+    <a class="page-link" [ngClass]="{ 'disabled': page === 1 }" (click)="onPrev()" aria-label="Anterior">
+      <span aria-hidden="true">&laquo;</span>
+      <span class="sr-only">Anterior</span>
+    </a>
+  </li>
+  <li *ngFor="let pageNum of getPages()" [ngClass]="{ 'active': page === pageNum }" class="page-item page-number">
+    <a (click)="onPage(pageNum)" class="page-link">{{ pageNum }}</a>
+  </li>
+  <li class="page-item page-number">
+    <a class="page-link" [ngClass]="{ 'disabled': lastPage() }" (click)="onNext()" aria-label="Siguiente">
+      <span aria-hidden="true">&raquo;</span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </li>
+</ul>

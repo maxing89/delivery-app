@@ -1,0 +1,32 @@
+@import '~assets/styles/_variables';
+
+// General Styles
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+// Layout
+
+.main {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+// Utilities
+
+.img-rounded {
+  border-radius: 20px;
+}
+
+.img-logout {
+  width: 20px;
+}
+
+.clickable {
+  cursor: pointer;
+}

@@ -1,0 +1,61 @@
+<div class="container pad-0">
+  <div class="title row">
+    <div class="col-md-12">
+      <div class="col-md-10">
+        <h3>Listado de deliveries</h3>
+      </div>
+      <div class="col-md-2 mar-t-4">
+        <button class="btn btn-primary btn-md" (click)="addDelivery()">
+          <span class="glyphicon glyphicon-asterisk"></span>
+          Crear nuevo delivery
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="filter row mar-t-4">
+    <div class="col-md-12">
+      <div class="col-md-2">
+        <div class="col-md-1 mar-t-3">
+          <span class="glyphicon glyphicon-filter"></span>
+        </div>
+        <div class="col-md-2">
+          <h4><strong>Filtros</strong></h4>
+        </div>
+      </div>
+      <div class="col-md-10 mar-t-1">
+        <form [formGroup]="filterForm">
+          <div class="col-md-5">
+            <input
+              type="text"
+              name="nombre"
+              formControlName="nombre"
+              class="form-control"
+              placeholder="Nombre">
+          </div>
+          <div class="col-md-5">
+            <input
+              type="text"
+              name="direccion"
+              formControlName="direccion"
+              class="form-control"
+              placeholder="Dirección">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row mar-t-8">
+    <app-table
+      [records]="deliveries$ | async"
+      [columns]="columns"
+      [sort]="sorting"
+      [page]="currentPage"
+      [pageSize]="pageSize"
+      [pagesToShow]="pagesToShow"
+      [recordsLength]="deliveriesLength$ | async"
+      (getRecords)="getDeliveries($event)"
+      (deleteRecord)="deleteDelivery($event)"
+      (editRecord)="editDelivery($event)">
+    </app-table>
+  </div>
+</div>

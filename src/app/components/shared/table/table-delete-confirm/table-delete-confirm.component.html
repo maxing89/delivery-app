@@ -1,0 +1,22 @@
+<div>
+  <ng-template #confirmPopover>
+    <div class="confirm-popover">
+      <div class="col-sm-12">
+        Estás seguro que deseas eliminarlo?
+      </div>
+      <div class="col-sm-12">
+        <button (click)="hideConfirm()" type="button" class="btn btn-link btn-link-cancel">No</button>
+        <button (click)="acceptConfirm()" type="button" class="btn btn-info pull-right">Sí</button>
+      </div>
+    </div>
+  </ng-template>
+
+  <button class="btn btn-danger btn-xs mar-r-2"
+    [popover]="confirmPopover"
+    [outsideClick]="true"
+    triggers="click"
+    container="body"
+    placement="top">
+    <span class="glyphicon glyphicon-trash"></span>
+  </button>
+</div>

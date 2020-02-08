@@ -1,0 +1,51 @@
+<div class="container pad-r-0">
+  <div class="row pad-t-6">
+    <div class="main">
+      <div class="col-md-12 pad-l-0">
+        <div class="col-md-6 col-md-offset-3">
+          <h1>Bienvenido/a</h1>
+          <h3>Ingrese sus credenciales.</h3>
+          <form autocomplete="off" [formGroup]="loginForm" (ngSubmit)="onLogin()" novalidate>
+            <div class="pad-t-7">
+              <div class="form-group" [ngClass]="{ 'has-error' : formErrors.username }">
+                <label for="username">Usuario</label>
+                <input
+                  type="text"
+                  name="username"
+                  class="form-control form-control-min"
+                  formControlName="username"
+                  maxlength="35"
+                  [autofocus]="true" />
+                <div *ngIf="formErrors.username" class="help-block">
+                  {{ formErrors.username }}
+                </div>
+              </div>
+              <div class="form-group" [ngClass]="{ 'has-error' : formErrors.password }">
+                <label for="password">Contraseña</label>
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control form-control-min"
+                  formControlName="password"
+                  maxlength="51" />
+                <div *ngIf="formErrors.password" class="help-block">
+                  {{ formErrors.password }}
+                </div>
+              </div>
+              <div class="form-footer clearfix">
+                <div *ngIf="error$ | async" class="has-error col-md-6 pad-l-0">
+                  <span class="help-block">{{ error$ | async }}. </span>
+                </div>
+                <div class="pull-right">
+                  <button type="submit" class="btn btn-primary btn-lg" [disabled]="loading$ | async">
+                    Login
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

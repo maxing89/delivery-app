@@ -1,0 +1,23 @@
+<div class="navbar-default">
+  <ul class="nav navbar-nav user-nav navbar-right">
+    <li dropdown>
+      <a dropdownToggle class="dropdown-toggle">
+        <img src="assets/images/avatar.png" alt="User Avatar" class="user-pic img-rounded">
+        <span class="user-name hidden-xs">
+          {{ ((user | async) && (user | async)._fullName !== null) ? (user | async)._fullName : "" }}
+        </span>
+      </a>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem">
+          <div class="col-md-8">
+            <a class="dropdown-item" (click)="logout()">
+              Logout
+            </a>
+          </div>
+          <img src="assets/images/logout.png" alt="Logout" class="img-logout">
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+</div>

@@ -1,0 +1,50 @@
+@import '~assets/styles/_variables';
+
+.app-wrapper {
+  min-height: 100%;
+	margin-bottom: -30px;
+}
+
+.app-wrapper:after {
+  content: "";
+  display: block;
+	height: 30px;
+}
+
+.navbar-default {
+  border: none;
+  background-color: $menu;
+
+  .navbar-brand {
+    float: left;
+    padding: 10px;
+    line-height: 40px;
+
+    h3 {
+      color: $menu-font;
+    }
+  }
+}
+
+main {
+  position: relative;
+  min-height: calc(100vh - 89px);
+}
+
+footer {
+  overflow: hidden;
+  padding: 0 15px;
+  height: auto;
+  line-height: 30px;
+  background-color: $footer;
+  border-top: 1px solid #dadee2;
+  font-size: 12px;
+
+  .footer-copyright {
+    color: $footer-font;
+
+    a {
+      color: $footer-font;
+    }
+  }
+}

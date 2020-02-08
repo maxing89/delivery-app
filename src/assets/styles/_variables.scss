@@ -1,0 +1,15 @@
+// Spacing
+$spacer: 1rem !default;
+$spacers: ( 0: 0, 1: ($spacer * .25), 2: ($spacer * .5), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 2), 6: ($spacer * 2.5), 7: ($spacer * 3), 8: ($spacer * 3.5), 9: ($spacer * 4), 10: ($spacer * 4.5), 20: ($spacer * 9), 25: ($spacer * 11.25), 30: ($spacer * 13.5) ) !default;
+
+// Buttons
+$input-border: #e0e0e0;
+$submit-button: #000686;
+
+// Menu
+$menu: #000686;
+$menu-font: #ffffff;
+
+// Footer
+$footer: #000686;
+$footer-font: #ffffff;
