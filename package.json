@@ -29,7 +29,7 @@
     "@ngrx/store-devtools": "3.2.4",
     "@types/jquery": "^3.3.2",
     "angular2-busy": "^2.0.4",
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap-sass": "^3.4.1",
     "core-js": "^2.4.1",
     "jquery": "^3.2.1",
     "ng-http-interceptor": "3.1.1",
